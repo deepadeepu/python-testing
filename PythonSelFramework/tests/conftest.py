@@ -15,7 +15,7 @@ def setup(request):
     if browser_name == "chrome":
         chrome_path = r"C:\Users\DEEPA\PythonTesting\chromedriver.exe"
         # loading chrome into driver
-        driver = webdriver.Chrome(chrome_path)
+        driver = webdriver.Chrome(executable_path=chrome_path)
 
     elif browser_name == "Edge":
         edgePath = r"C:\Users\DEEPA\PythonTesting\msedgedriver.exe"
