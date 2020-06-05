@@ -14,7 +14,7 @@ agent any
             }
             post {
                 always {
-                     junit '**/target/*.xml'
+                     junit 'PythonSelFramework/tests/results.xml'
                 }
 }
 
