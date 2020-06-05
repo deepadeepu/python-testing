@@ -1,6 +1,6 @@
 import openpyxl
 
-book = openpyxl.load_workbook(r"C:\Users\DEEPA\PythonTesting\Testing1\PythonSelFramework\test_data.xlsx")
+book = openpyxl.load_workbook(r"C:\Users\DEEPA\python-testing\PythonSelFramework\test_data.xlsx")
 sheet = book.active
 
 
