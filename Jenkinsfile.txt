@@ -7,8 +7,8 @@ agent any
             steps {
                 bat script: '''
                     pip install -r requirements.txt
-                    py.test PythonSelFramework/tests/test_e2e.py --browsername chrome
-                    py.test PythonSelFramework/tests/test_Homepage.py  --browsername chrome
+                    py.test PythonSelFramework/tests/test_e2e.py
+                    py.test PythonSelFramework/tests/test_Homepage.py
 		    py.test --junitxml="PythonSelFramework/tests/result.xml"'''
 
             }
