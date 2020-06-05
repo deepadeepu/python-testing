@@ -1,5 +1,6 @@
 pipeline {
 agent any
+agent any
  stages{
     stage('Test on Windows') {
 
@@ -12,7 +13,7 @@ agent any
             }
             post {
                 always {
-                    junit 'py.test --junitxml='PythonSelFramework/tests/result.xml''
+                    junit 'py.test --junitxml="PythonSelFramework/tests/result.xml"'
                 }
 }
 
