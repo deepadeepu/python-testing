@@ -13,7 +13,7 @@ def setup(request):
     global driver
     browser_name = request.config.getoption("browser_name")
     if browser_name == "chrome":
-        chrome_path = r"C:\Users\DEEPA\PythonTesting\Testing1\chromedriver.exe"
+        chrome_path = r"C:\Users\DEEPA\PythonTesting\chromedriver.exe"
         # loading chrome into driver
         driver = webdriver.Chrome(chrome_path)
 
