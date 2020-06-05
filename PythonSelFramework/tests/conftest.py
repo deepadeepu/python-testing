@@ -1,5 +1,6 @@
 import pytest
 from Tools.scripts.fixdiv import report
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 driver=None
 
@@ -15,7 +16,7 @@ def setup(request):
     if browser_name == "chrome":
         chrome_path = r"C:\Users\DEEPA\PythonTesting\chromedriver.exe"
         # loading chrome into driver
-        driver = webdriver.Chrome(executable_path=chrome_path)
+        driver = webdriver.Chrome(executable_path=ChromeDriverManager().install())
 
     elif browser_name == "Edge":
         edgePath = r"C:\Users\DEEPA\PythonTesting\msedgedriver.exe"
