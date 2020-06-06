@@ -30,7 +30,7 @@ stage('Build') {
             }
             post {
                 always {
-                     jiraSendBuildInfo branch: 'NEWISSUE-1', site: 'deepadeepu5.atlassian.net',issueKey:'NEWISSUE-1'
+                     jiraSendBuildInfo branch: 'NEWISSUE-1', site: 'deepadeepu5.atlassian.net'
                 }
 }
 
