@@ -6,10 +6,11 @@ agent any
 stage('Build') {
    steps {
        echo 'Building...'
+
    }
    post {
        always {
-           jiraSendBuildInfo branch: ' myproject', site: 'deepadeepu5.atlassian.net',issueKey:'NEWISSUE-1'
+           jiraSendBuildInfo branch: ' myproject', site: 'deepadeepu5.atlassian.net',JIRA_ISSUE_KEY:'NEWISSUE-1'
 
 
        }
