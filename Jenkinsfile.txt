@@ -9,7 +9,9 @@ stage('Build') {
    }
    post {
        always {
-           jiraSendBuildInfo branch: ' myproject', site: 'deepadeepu5.atlassian.net'
+           jiraSendBuildInfo branch: ' myproject', site: 'deepadeepu5.atlassian.net',Key:'NEWISSUE-1'
+
+
        }
    }
 }
@@ -27,7 +29,7 @@ stage('Build') {
             }
             post {
                 always {
-                     jiraSendBuildInfo branch: ' myproject', site: 'deepadeepu5.atlassian.net'
+                     jiraSendBuildInfo branch: ' myproject', site: 'deepadeepu5.atlassian.net',Key:'NEWISSUE-1'
                 }
 }
 
