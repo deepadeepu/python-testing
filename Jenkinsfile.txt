@@ -22,7 +22,7 @@ stage('Build') {
             steps {
                 bat script: '''
                     pip install -r requirements.txt
-                    py.test --html=PythonSelFramework/reports/report.xml
+                    py.test --html=PythonSelFramework/reports/report.html
                     py.test --junitxml=PythonSelFramework/reports/result.xml
 		    '''
 
@@ -31,7 +31,7 @@ stage('Build') {
                 always {
                      jiraSendBuildInfo branch: 'NEWISSUE-1', site: 'deepadeepu5.atlassian.net'
                      publishTestResults serverAddress: 'https://deepadeepu5.atlassian.net/jira',
-                    projectKey: 'WEB',
+                    projectKey: 'NEWISSUE-1',
                     filePath:'target/cucumber/*.json',
                     format: 'Pytest',
                     autoCreateTestCases: false
