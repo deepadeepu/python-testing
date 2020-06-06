@@ -22,15 +22,19 @@ stage('Build') {
             steps {
                 bat script: '''
                     pip install -r requirements.txt
-                    py.test PythonSelFramework/tests/test_e2e.py
-                    py.test PythonSelFramework/tests/test_Homepage.py
-                    py.test --junitxml=PythonSelFramework/tests/result.xml
+                    py.test --html=PythonSelFramework/reports/report.xml
+                    py.test --junitxml=PythonSelFramework/reports/result.xml
 		    '''
 
             }
             post {
                 always {
                      jiraSendBuildInfo branch: 'NEWISSUE-1', site: 'deepadeepu5.atlassian.net'
+                     publishTestResults serverAddress: 'https://deepadeepu5.atlassian.net/jira',
+                    projectKey: 'WEB',
+                    filePath:'target/cucumber/*.json',
+                    format: 'Pytest',
+                    autoCreateTestCases: false
                 }
 }
 
