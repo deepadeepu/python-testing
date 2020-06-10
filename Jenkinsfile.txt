@@ -32,7 +32,7 @@ stage('Build') {
                      jiraSendBuildInfo branch: 'NEWISSUE-1', site: 'deepadeepu5.atlassian.net'
                      publishTestResults serverAddress: 'https://deepadeepu5.atlassian.net/jira',
                     projectKey: 'NEWISSUE-1',
-                    filePath:'target/cucumber/*.json',
+                    filePath:'C:/Users/DEEPA/.jenkins/workspace/newseltest/PythonSelFramework/reports',
                     format: 'Pytest',
                     autoCreateTestCases: false
                 }
