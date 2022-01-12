@@ -39,7 +39,7 @@ openpyxl==3.0.3
 packaging==20.4
 parse==1.15.0
 parse-type==0.5.2
-pipenv==2020.6.2
+pipenv==2022.1.8
 pluggy==0.13.1
 psycopg2==2.8.4
 py==1.8.1
