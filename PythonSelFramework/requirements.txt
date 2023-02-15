@@ -65,5 +65,5 @@ virtualenv==20.0.21
 virtualenv-clone==0.5.4
 wcwidth==0.1.9
 websocket-client==0.57.0
-Werkzeug==0.16.0
+Werkzeug==2.2.3
 zope.interface==5.0.0
