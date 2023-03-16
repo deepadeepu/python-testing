@@ -54,7 +54,7 @@ pytest-pipeline==0.3.0
 python-engineio==3.12.1
 python-socketio==4.5.1
 pytz==2019.3
-pywin32==227
+pywin32==301
 requests==2.23.0
 selenium==3.141.0
 six==1.14.0
